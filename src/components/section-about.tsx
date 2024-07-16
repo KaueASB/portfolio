@@ -15,6 +15,7 @@ export function About() {
           </p>
         </div>
       </div>
+
       <div className="flex flex-col gap-4">
         <div>
           <h3 className="text-xl font-bold mb-2">Skills</h3>
@@ -42,12 +43,15 @@ export function About() {
             <li>PostgreSQL</li>
             <li>MongoDB</li>
             <li>Redis</li>
+            <li>Stripe</li>
           </ul>
         </div>
+
         <div>
-          <h3 className="text-xl font-bold mb-2">Experience</h3>
+          <h3 className="text-xl font-bold mb-2">Experiência</h3>
           <p className="text-muted-foreground">
-            3+ years as a frontend developer, working on a variety of web applications.
+            3+ years as a frontend developer, working on a variety of web applications.<br />
+            +3 anos como desenvolvedor trabalhando com diversas aplicações web com foco em backend.
           </p>
         </div>
       </div>
