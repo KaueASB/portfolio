@@ -22,7 +22,7 @@ export function Projects() {
           description={t('projects.project_two.description')}
           linkGithub="#"
           linkDeploy="https://kjrdev.com.br/"
-          environment="Produção"
+          environment={t('projects.project_two.environment')}
         />
 
         <CardProject
