@@ -1,0 +1,81 @@
+{
+  "header": {
+    "role": "Desenvolvedor Backend",
+    "nav": {
+      "about": "Sobre",
+      "project": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "about": {
+    "title": "Sobre mim",
+    "paragraph_one_about": "Atuei como Comprador de 2011 a 2021, lidando com <1>{{span_one_about}}</1>. Contudo, optei por uma transição de carreira e vi na área de tecnologia uma grande oportunidade de tentar algo novo.",
+    "span_one_about": "negociação para contratações de serviços, compras de insumos e consumo e gestão de contratos",
+    "paragraph_two_about": "Hoje, sou Desenvolvedor Full Stack formado pela @Trybe, com experiência em desenvolvimento web, gerenciamento de banco de dados e criação de APIs. Além disso, adquiri habilidades em <1>{{span_two_about}}</1> através de projetos colaborativos e Hackathons.",
+    "span_two_about": "trabalho em equipe, comunicação, pensamento crítico, lógica de programação e resolução de problemas",
+    "paragraph_three_about": "Estou sempre buscando me aperfeiçoar e encontrar novos aprendizados. Estou aberto a novas oportunidades para aplicar minhas habilidades técnicas e contribuir com projetos desafiadores",
+    "skills": {
+      "title": "Habilidades"
+    },
+    "experience": {
+      "title": "Experiência",
+      "description": "+3 anos como desenvolvedor trabalhando com diversas aplicações web com foco em backend."
+    }
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "see_project": "Ver Projeto",
+    "project_one": {
+      "title": "I Love Pastel",
+      "description": "Aplicação web para gerenciamento de pedidos e gerenciamento de estoque.",
+      "environment": "Produção"
+    },
+    "project_two": {
+      "title": "KJR Desenvolvimento",
+      "description": "Landing page de uma software house.",
+      "environment": "Produção"
+    },
+    "project_three": {
+      "title": "Upload AI",
+      "description": "Projeto para conversão de vídeo em áudio e transcrição de texto com OpenAI API para sugestão de título e descrição.",
+      "environment": "dev"
+    },
+    "project_four": {
+      "title": "Gym API",
+      "description": "API para gerenciamento de academia no estilo Gympass. Aplicando conceitos de S.O.L.I.D.",
+      "environment": "dev"
+    },
+    "project_five": {
+      "title": "Pizza Shop API",
+      "description": "API para gerenciamento de pizzaria no estilo IFood. Sendo possível acompanhar pedidos, alterar status, realizar cancelamento e gerar dashboard",
+      "environment": "dev"
+    },
+    "project_six": {
+      "title": "Sistema de Votação em Tempo Real",
+      "description": "API para aplicação de votação em tempo real. Criação de enquetes, votação e acompanhamento de votos.",
+      "environment": "dev"
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "info": {
+      "title": "Informações de Contato"
+    },
+    "send": {
+      "title": "Envie uma Mensagem",
+      "form": {
+        "name": "Nome",
+        "email": "Email",
+        "message": "Mensagem",
+        "button": {
+          "to_send": "Enviar Mensagem",
+          "sending": "Enviando..."
+        }
+      }
+    }
+  },
+  "footer": {
+    "rights": "2024 Kaue Alves. Todos os direitos reservados.",
+    "top": "Voltar ao topo"
+  }
+}

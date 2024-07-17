@@ -1,26 +1,40 @@
-import { ListSkills } from "./list-skills";
+import { useTranslation, Trans } from "react-i18next"
+
+import { ListSkills } from "./list-skills"
 
 export function About() {
+  const { t } = useTranslation()
+  
   return (
     <section id="about" className="grid md:grid-cols-2 gap-8">
       <div>
-        <h2 className="text-3xl font-bold mb-4">About Me</h2>
+        <h2 className="text-3xl font-bold mb-4">{t('about.title')}</h2>
         <div className="text-muted-foreground">
           <p className="leading-relaxed">
-            Atuei como Comprador de 2011 a 2021, lidando com <span className="underline font-bold text-primary">negociação para contratações de serviços, compras de insumos e consumo e gestão de contratos</span>. Contudo, optei por uma transição de carreira e vi na área de tecnologia uma grande oportunidade de tentar algo novo.
+            <Trans
+              i18nKey="about.paragraph_one_about"
+              components={{ 1: <span className="underline font-bold text-primary" /> }}
+              values={{ span_one_about: t('about.span_one_about') }}
+            />
           </p><br />
+
           <p className="leading-relaxed">
-            Hoje, sou Desenvolvedor Full Stack formado pela @Trybe, com experiência em desenvolvimento web, gerenciamento de banco de dados e criação de APIs. Além disso, adquiri habilidades em <span className="underline font-semibold text-primary">trabalho em equipe, comunicação, pensamento crítico, lógica de programação e resolução de problemas</span> através de projetos colaborativos e Hackathons.
+            <Trans
+              i18nKey="about.paragraph_two_about"
+              components={{ 1: <span className="underline font-bold text-primary" /> }}
+              values={{ span_two_about: t('about.span_two_about') }}
+            />
           </p><br />
+
           <p className="leading-relaxed">
-            Estou sempre buscando me aperfeiçoar e encontrar novos aprendizados. Estou aberto a novas oportunidades para aplicar minhas habilidades técnicas e contribuir com projetos desafiadores.
+            {t('about.paragraph_three_about')}.
           </p>
         </div>
       </div>
 
       <div className="flex flex-col gap-4">
         <div>
-          <h3 className="text-xl font-bold mb-2">Skills</h3>
+          <h3 className="text-xl font-bold mb-2">{t('about.skills.title')}</h3>
           <ul className="grid grid-cols-3 gap-2 text-muted-foreground">
             <ListSkills>
               <svg className="size-5 fill-html" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
@@ -155,10 +169,8 @@ export function About() {
         </div>
 
         <div>
-          <h3 className="text-xl font-bold mb-2">Experiência</h3>
-          <p className="text-muted-foreground">
-            +3 anos como desenvolvedor trabalhando com diversas aplicações web com foco em backend.
-          </p>
+          <h3 className="text-xl font-bold mb-2">{t('about.experience.title')}</h3>
+          <p className="text-muted-foreground">{t('about.experience.description')}</p>
         </div>
       </div>
     </section>

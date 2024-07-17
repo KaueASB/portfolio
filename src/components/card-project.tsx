@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next"
+
 import { Badge } from "./ui/badge"
 
 type CardProjectProps = {
@@ -5,10 +7,12 @@ type CardProjectProps = {
   description: string
   linkDeploy?: string
   linkGithub?: string
-  environment?: 'dev' | 'Produção'
+  environment?: string
 }
 
 export function CardProject({name, description, linkDeploy, linkGithub, environment = 'dev'}: CardProjectProps) {
+  const { t } = useTranslation()
+
   return (
     <div className="bg-muted rounded-lg overflow-hidden">
       <div className="p-6">
@@ -27,7 +31,7 @@ export function CardProject({name, description, linkDeploy, linkGithub, environm
             target={linkDeploy ? '_blank' : ''}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           >
-            Ver Projeto
+            {t('projects.see_project')}
           </a>
 
           <a

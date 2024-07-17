@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
 import { App } from './app'
 import './global.css'
+import './lib/i18n'
 
 import { ThemeProvider } from '@/components/theme/theme-provider'
 

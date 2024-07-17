@@ -1,0 +1,81 @@
+{
+  "header": {
+    "role": "Backend Developer",
+    "nav": {
+      "about": "About",
+      "project": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph_one_about": "I worked as a Buyer from 2011 to 2021, dealing with <1>{{span_one_about}}</1>. However, I chose a career transition and saw a great opportunity in the technology field to try something new.",
+    "span_one_about": "negotiation for service contracts, purchasing supplies and consumables, and contract management",
+    "paragraph_two_about": "Today, I am a Full Stack Developer graduated from @Trybe, with experience in web development, database management, and API creation. Additionally, I have acquired skills in <1>{{span_two_about}}</1> through collaborative projects and hackathons.",
+    "span_two_about": "teamwork, communication, critical thinking, programming logic, and problem-solving",
+    "paragraph_three_about": "I am always looking to improve myself and find new learning opportunities. I am open to new opportunities to apply my technical skills and contribute to challenging projects.",
+    "skills": {
+      "title": "Skills"
+    },
+    "experience": {
+      "title": "Experience",
+      "description": "+3 years as a developer working with various web applications focused on backend."
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "see_project": "See Project",
+    "project_one": {
+      "title": "I Love Pastel",
+      "description": "Web application for order management and inventory management.",
+      "environment": "Production"
+    },
+    "project_two": {
+      "title": "KJR Development",
+      "description": "Landing page of a software house.",
+      "environment": "Production"
+    },
+    "project_three": {
+      "title": "Upload AI",
+      "description": "Project for video-to-audio conversion and text transcription with OpenAI API for title and description suggestions.",
+      "environment": "dev"
+    },
+    "project_four": {
+      "title": "Gym API",
+      "description": "API for gym management in the Gympass style. Applying S.O.L.I.D. principles.",
+      "environment": "dev"
+    },
+    "project_five": {
+      "title": "Pizza Shop API",
+      "description": "API for pizzeria management in the IFood style. Allows tracking orders, changing status, canceling, and generating a dashboard.",
+      "environment": "dev"
+    },
+    "project_six": {
+      "title": "Real-Time Voting System",
+      "description": "API for real-time voting application. Creating polls, voting, and tracking votes.",
+      "environment": "dev"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "info": {
+      "title": "Contact Information"
+    },
+    "send": {
+      "title": "Send a Message",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "button": {
+          "to_send": "Send Message",
+          "sending": "Sending..."
+        }
+      }
+    }
+  },
+  "footer": {
+    "rights": "2024 Kaue Alves. All rights reserved.",
+    "top": "Back to top"
+  }
+}

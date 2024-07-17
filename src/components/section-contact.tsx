@@ -1,13 +1,17 @@
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 import { Mail, Phone, Github, Linkedin, Loader2 } from "lucide-react"
 
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
+
 import { emailjs } from "@/lib/emailjs"
 
 export function Contact() {
+  const { t } = useTranslation()
+
   const [isLoading, setIsLoading] = useState(false)
 
   function handleEmailSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -51,10 +55,10 @@ export function Contact() {
 
   return (
     <section id="contact" className="grid gap-8">
-      <h2 className="text-3xl font-bold">Entre em Contato</h2>
+      <h2 className="text-3xl font-bold">{t('contact.title')}</h2>
       <div className="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-2">Informações de Contato</h3>
+          <h3 className="text-xl font-bold mb-2">{t('contact.info.title')}</h3>
           <ul className="space-y-2 text-muted-foreground">
             <li>
               <Mail className="w-5 h-5 inline-block mr-2" />
@@ -76,23 +80,23 @@ export function Contact() {
         </div>
         
         <div>
-          <h3 className="text-xl font-bold mb-2">Envie uma Mensagem</h3>
+          <h3 className="text-xl font-bold mb-2">{t('contact.send.title')}</h3>
           <form onSubmit={handleEmailSubmit} className="grid gap-4">
             <Input
               type="text"
               name="name"
-              placeholder="Nome"
+              placeholder={t('contact.send.form.name')}
               className="w-full"
             />
             <Input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder={t('contact.send.form.email')}
               className="w-full"
             />
             <Textarea
               name="message"
-              placeholder="Mensagem"
+              placeholder={t('contact.send.form.message')}
               rows={4}
               className="w-full"
             />
@@ -100,10 +104,10 @@ export function Contact() {
               {isLoading ? (
                 <>
                   <Loader2 className="size-5 animate-spin mr-2" />
-                  Enviando...
+                  {t('contact.send.form.button.sending')}
                 </>
               ): (
-                'Enviar Mensagem'
+                t('contact.send.form.button.to_send')
               )}
             </Button>
           </form>
