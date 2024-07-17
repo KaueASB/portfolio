@@ -27,7 +27,7 @@ export function About() {
           </p><br />
 
           <p className="leading-relaxed">
-            {t('about.paragraph_three_about')}.
+            {t('about.paragraph_three_about')}
           </p>
         </div>
       </div>

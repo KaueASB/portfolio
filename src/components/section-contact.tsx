@@ -2,12 +2,17 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { Mail, Phone, Github, Linkedin, Loader2 } from "lucide-react"
+import { toast } from "sonner"
 
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 
 import { emailjs } from "@/lib/emailjs"
+
+interface FieldLabels {
+  [key: string]: string
+}
 
 export function Contact() {
   const { t } = useTranslation()
@@ -31,9 +36,25 @@ export function Contact() {
     const email = data.get('email')?.toString()
     const message = data.get('message')?.toString()
 
-    if(!name || !email || !message) {
+    const fieldLabels: FieldLabels = {
+      name: t('contact.send.form.name'),
+      email: t('contact.send.form.email'),
+      message: t('contact.send.form.message'),
+    }
+
+    const fields: { [key: string]: string | undefined } = { name, email, message }
+
+    const missingFields = Object.keys(fields)
+      .filter(key => !fields[key])
+      .map(key => fieldLabels[key])
+
+    if (missingFields.length > 0) {
+      toast.error(t('toaster.error.missing_field.title'), {
+        description: `${t('toaster.error.missing_field.description')} ${missingFields.join(', ')}`,
+        position: "top-center",
+      })
+  
       setIsLoading(false)
-      alert('Preencha todos os campos!')
       return
     }
 
@@ -44,11 +65,18 @@ export function Contact() {
     }
 
     emailjs.send(VITE_SERVICE_ID_EMAILJS, VITE_TEMPLATE_EMAILJS, templateParams).then(() => {
-      alert('Email enviado com sucesso!')
-      setIsLoading(false)
-    }, (error) => {
-      alert(error.message)
-    })
+      toast.success(t('toaster.success.title'), {
+        description: t('toaster.success.description'),
+        position:"top-center",
+        duration: 2500,
+      })
+    }, () => {      
+      toast.error(t('toaster.error.email_fail.title'), {
+        description: t('toaster.error.email_fail.description'),
+        position:"top-center",
+        duration: 2500,
+      })
+    }).finally(() => { setIsLoading(false) })
 
     event.currentTarget.reset()
   }

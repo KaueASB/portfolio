@@ -1,4 +1,20 @@
 {
+  "toaster": {
+    "success": {
+      "title": "Enviado",
+      "description": "E-mail enviado com sucesso!"
+    },
+    "error": {
+      "missing_field": {
+        "title": "Preencha todos os campos!",
+        "description": "Campos faltando: "
+      },
+      "email_fail": {
+        "title": "Erro",
+        "description": "Ocorreu um erro ao enviar o e-mail!"
+      }
+    }
+  },
   "header": {
     "role": "Desenvolvedor Backend",
     "nav": {
@@ -13,7 +29,7 @@
     "span_one_about": "negociação para contratações de serviços, compras de insumos e consumo e gestão de contratos",
     "paragraph_two_about": "Hoje, sou Desenvolvedor Full Stack formado pela @Trybe, com experiência em desenvolvimento web, gerenciamento de banco de dados e criação de APIs. Além disso, adquiri habilidades em <1>{{span_two_about}}</1> através de projetos colaborativos e Hackathons.",
     "span_two_about": "trabalho em equipe, comunicação, pensamento crítico, lógica de programação e resolução de problemas",
-    "paragraph_three_about": "Estou sempre buscando me aperfeiçoar e encontrar novos aprendizados. Estou aberto a novas oportunidades para aplicar minhas habilidades técnicas e contribuir com projetos desafiadores",
+    "paragraph_three_about": "Estou sempre buscando me aperfeiçoar e encontrar novos aprendizados. Estou aberto a novas oportunidades para aplicar minhas habilidades técnicas e contribuir com projetos desafiadores.",
     "skills": {
       "title": "Habilidades"
     },

@@ -1,4 +1,20 @@
 {
+  "toaster": {
+    "success": {
+      "title": "Sent",
+      "description": "Email successfully sent!"
+    },
+    "error": {
+      "missing_field": {
+        "title": "Fill in all fields!",
+        "description": "Missing fields: "
+      },
+      "email_fail": {
+        "title": "Error",
+        "description": "An error occurred while sending the email!"
+      }
+    }
+  },
   "header": {
     "role": "Backend Developer",
     "nav": {
