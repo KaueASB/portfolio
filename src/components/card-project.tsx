@@ -24,12 +24,12 @@ export function CardProject({name, description, linkDeploy, linkGithub, environm
             <Badge variant="green">{environment}</Badge>
           )}
         </div>
-        <p className="text-muted-foreground mb-4">{description}</p>
+        <p className="text-muted-foreground mb-4 h-16 overflow-visible">{description}</p>
         <div className="flex gap-4">
           <a
             href={linkDeploy ?? '#projects'}
             target={linkDeploy ? '_blank' : ''}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            className={`inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring ${!linkDeploy ? 'pointer-events-none opacity-50' : ''}`}
           >
             {t('projects.see_project')}
           </a>
@@ -37,7 +37,7 @@ export function CardProject({name, description, linkDeploy, linkGithub, environm
           <a
             href={linkGithub ?? '#projects'}
             target={linkGithub ? '_blank' : ''}
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-primary-foreground hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            className={`inline-flex items-center justify-center rounded-md border border-input bg-primary-foreground px-4 py-2 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-primary-foreground hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring ${!linkGithub ? 'pointer-events-none opacity-50' : ''}`}
           >
             GitHub
           </a>

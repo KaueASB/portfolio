@@ -70,6 +70,11 @@
       "title": "Real-Time Voting System",
       "description": "API for real-time voting application. Creating polls, voting, and tracking votes.",
       "environment": "dev"
+    },
+    "project_seven": {
+      "title": "Cartão Vet",
+      "description": "Pet benefits club, providing discounts on veterinary consultations, exams, vaccinations, medicines, pet shop products and services.",
+      "environment": "Production"
     }
   },
   "contact": {

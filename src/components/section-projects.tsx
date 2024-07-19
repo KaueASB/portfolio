@@ -6,21 +6,29 @@ export function Projects() {
   const { t } = useTranslation()
 
   return (
-    <section id="projects" className="grid gap-12">
+    <section id="projects" className="grid gap-8 scroll-mt-28">
       <h2 className="text-3xl font-bold">{t('projects.title')}</h2>
       <div className="grid md:grid-cols-2 gap-8">
         <CardProject
+          name={t('projects.project_seven.title')}
+          description={t('projects.project_seven.description')}
+          linkGithub=""
+          linkDeploy="https://cartaovet.com.br/"
+          environment={t('projects.project_seven.environment')}
+        />
+
+        <CardProject
           name={t('projects.project_one.title')}
           description={t('projects.project_one.description')}
-          linkGithub="#"
+          linkGithub=""
           linkDeploy="https://pastelaria-maza.vercel.app"
           environment={t('projects.project_one.environment')}
-          />
+        />
 
         <CardProject
           name={t('projects.project_two.title')}
           description={t('projects.project_two.description')}
-          linkGithub="#"
+          linkGithub=""
           linkDeploy="https://kjrdev.com.br/"
           environment={t('projects.project_two.environment')}
         />

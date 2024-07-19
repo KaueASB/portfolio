@@ -70,6 +70,11 @@
       "title": "Sistema de Votação em Tempo Real",
       "description": "API para aplicação de votação em tempo real. Criação de enquetes, votação e acompanhamento de votos.",
       "environment": "dev"
+    },
+    "project_seven": {
+      "title": "Cartão Vet",
+      "description": "Clube de benefícios para pets, proporcionando descontos em consultas veterinárias, exames, vacinas, medicamentos, produtos de pet shop e serviços.",
+      "environment": "Produção"
     }
   },
   "contact": {
