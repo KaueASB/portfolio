@@ -15,6 +15,11 @@
       }
     }
   },
+  "common": {
+    "back": "Back",
+    "theme": "Theme",
+    "language": "Language"
+  },
   "header": {
     "role": "Backend Developer",
     "nav": {
@@ -41,39 +46,73 @@
   "projects": {
     "title": "My Projects",
     "see_project": "See Project",
+    "view_all": "View All",
+    "see_all_projects": "See All Projects",
+    "featured": "Featured",
+    "featured_description": "Here are some of my featured projects that showcase my skills and experience.",
+    "search_placeholder": "Search projects...",
+    "showing_results": "Showing {{count}} of {{total}} projects",
+    "no_results": "No projects found with the current filters.",
+    "clear_filters": "Clear all filters",
+    "category": {
+      "all": "All Categories",
+      "web": "Web",
+      "mobile": "Mobile",
+      "api": "API",
+      "fullstack": "Full Stack"
+    },
+    "status": {
+      "all": "All Status",
+      "production": "Production",
+      "development": "Development",
+      "archived": "Archived"
+    },
+    "stats": {
+      "total": "Total Projects",
+      "production": "In Production",
+      "development": "In Development",
+      "featured": "Featured"
+    },
     "project_one": {
       "title": "I Love Pastel",
       "description": "Web application for order management and inventory management.",
+      "long_description": "Complete web application for managing orders and inventory in a pastel shop, featuring real-time updates and intuitive interface.",
       "environment": "Production"
     },
     "project_two": {
       "title": "KJR Development",
       "description": "Landing page of a software house.",
+      "long_description": "Modern and responsive landing page for a software development company, showcasing services and portfolio.",
       "environment": "Production"
     },
     "project_three": {
       "title": "Upload AI",
       "description": "Project for video-to-audio conversion and text transcription with OpenAI API for title and description suggestions.",
+      "long_description": "Innovative application that converts videos to audio, transcribes content, and uses AI to generate optimized titles and descriptions.",
       "environment": "dev"
     },
     "project_four": {
       "title": "Gym API",
       "description": "API for gym management in the Gympass style. Applying S.O.L.I.D. principles.",
+      "long_description": "Robust API for gym management following SOLID principles, featuring user authentication, check-ins, and gym search functionality.",
       "environment": "dev"
     },
     "project_five": {
       "title": "Pizza Shop API",
       "description": "API for pizzeria management in the IFood style. Allows tracking orders, changing status, canceling, and generating a dashboard.",
+      "long_description": "Complete API for pizzeria management with order tracking, status management, cancellation features, and comprehensive dashboard.",
       "environment": "dev"
     },
     "project_six": {
       "title": "Real-Time Voting System",
       "description": "API for real-time voting application. Creating polls, voting, and tracking votes.",
+      "long_description": "Real-time voting system API with WebSocket support for live vote tracking, poll creation, and result visualization.",
       "environment": "dev"
     },
     "project_seven": {
       "title": "Cartão Vet",
       "description": "Pet benefits club, providing discounts on veterinary consultations, exams, vaccinations, medicines, pet shop products and services.",
+      "long_description": "Comprehensive pet benefits platform offering exclusive discounts on veterinary services, medications, and pet care products.",
       "environment": "Production"
     }
   },

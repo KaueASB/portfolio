@@ -15,6 +15,11 @@
       }
     }
   },
+  "common": {
+    "back": "Voltar",
+    "theme": "Tema",
+    "language": "Idioma"
+  },
   "header": {
     "role": "Desenvolvedor Backend",
     "nav": {
@@ -26,10 +31,10 @@
   "about": {
     "title": "Sobre mim",
     "paragraph_one_about": "Atuei como Comprador de 2011 a 2021, lidando com <1>{{span_one_about}}</1>. Contudo, optei por uma transição de carreira e vi na área de tecnologia uma grande oportunidade de tentar algo novo.",
-    "span_one_about": "negociação para contratações de serviços, compras de insumos e consumo e gestão de contratos",
-    "paragraph_two_about": "Hoje, sou Desenvolvedor Full Stack formado pela @Trybe, com experiência em desenvolvimento web, gerenciamento de banco de dados e criação de APIs. Além disso, adquiri habilidades em <1>{{span_two_about}}</1> através de projetos colaborativos e Hackathons.",
+    "span_one_about": "negociação para contratos de serviços, compras de suprimentos e consumíveis e gestão de contratos",
+    "paragraph_two_about": "Hoje, sou Desenvolvedor Full Stack formado pela @Trybe, com experiência em desenvolvimento web, gerenciamento de banco de dados e criação de APIs. Além disso, adquiri habilidades em <1>{{span_two_about}}</1> através de projetos colaborativos e hackathons.",
     "span_two_about": "trabalho em equipe, comunicação, pensamento crítico, lógica de programação e resolução de problemas",
-    "paragraph_three_about": "Estou sempre buscando me aperfeiçoar e encontrar novos aprendizados. Estou aberto a novas oportunidades para aplicar minhas habilidades técnicas e contribuir com projetos desafiadores.",
+    "paragraph_three_about": "Estou sempre buscando me aperfeiçoar e encontrar novas oportunidades de aprendizado. Estou aberto a novas oportunidades para aplicar minhas habilidades técnicas e contribuir para projetos desafiadores.",
     "skills": {
       "title": "Habilidades"
     },
@@ -41,39 +46,73 @@
   "projects": {
     "title": "Meus Projetos",
     "see_project": "Ver Projeto",
+    "view_all": "Ver Todos",
+    "see_all_projects": "Ver Todos os Projetos",
+    "featured": "Destaques",
+    "featured_description": "Aqui estão alguns dos meus projetos em destaque que demonstram minhas habilidades e experiência.",
+    "search_placeholder": "Buscar projetos...",
+    "showing_results": "Mostrando {{count}} de {{total}} projetos",
+    "no_results": "Nenhum projeto encontrado com os filtros atuais.",
+    "clear_filters": "Limpar todos os filtros",
+    "category": {
+      "all": "Todas as Categorias",
+      "web": "Web",
+      "mobile": "Mobile",
+      "api": "API",
+      "fullstack": "Full Stack"
+    },
+    "status": {
+      "all": "Todos os Status",
+      "production": "Produção",
+      "development": "Desenvolvimento",
+      "archived": "Arquivado"
+    },
+    "stats": {
+      "total": "Total de Projetos",
+      "production": "Em Produção",
+      "development": "Em Desenvolvimento",
+      "featured": "Em Destaque"
+    },
     "project_one": {
       "title": "I Love Pastel",
-      "description": "Aplicação web para gerenciamento de pedidos e gerenciamento de estoque.",
+      "description": "Aplicação web para gerenciamento de pedidos e controle de estoque.",
+      "long_description": "Aplicação web completa para gerenciar pedidos e estoque em uma pastelaria, com atualizações em tempo real e interface intuitiva.",
       "environment": "Produção"
     },
     "project_two": {
-      "title": "KJR Desenvolvimento",
+      "title": "KJR Development",
       "description": "Landing page de uma software house.",
+      "long_description": "Landing page moderna e responsiva para uma empresa de desenvolvimento de software, apresentando serviços e portfólio.",
       "environment": "Produção"
     },
     "project_three": {
       "title": "Upload AI",
-      "description": "Projeto para conversão de vídeo em áudio e transcrição de texto com OpenAI API para sugestão de título e descrição.",
+      "description": "Projeto para conversão de vídeo em áudio e transcrição de texto com API da OpenAI para sugestões de título e descrição.",
+      "long_description": "Aplicação inovadora que converte vídeos em áudio, transcreve conteúdo e usa IA para gerar títulos e descrições otimizados.",
       "environment": "dev"
     },
     "project_four": {
       "title": "Gym API",
-      "description": "API para gerenciamento de academia no estilo Gympass. Aplicando conceitos de S.O.L.I.D.",
+      "description": "API para gerenciamento de academia no estilo Gympass. Aplicando princípios S.O.L.I.D.",
+      "long_description": "API robusta para gerenciamento de academia seguindo princípios SOLID, com autenticação de usuários, check-ins e funcionalidade de busca de academias.",
       "environment": "dev"
     },
     "project_five": {
       "title": "Pizza Shop API",
-      "description": "API para gerenciamento de pizzaria no estilo IFood. Sendo possível acompanhar pedidos, alterar status, realizar cancelamento e gerar dashboard",
+      "description": "API para gerenciamento de pizzaria no estilo IFood. Permite acompanhar pedidos, alterar status, cancelar e gerar dashboard.",
+      "long_description": "API completa para gerenciamento de pizzaria com rastreamento de pedidos, gerenciamento de status, recursos de cancelamento e dashboard abrangente.",
       "environment": "dev"
     },
     "project_six": {
       "title": "Sistema de Votação em Tempo Real",
       "description": "API para aplicação de votação em tempo real. Criação de enquetes, votação e acompanhamento de votos.",
+      "long_description": "API de sistema de votação em tempo real com suporte WebSocket para rastreamento de votos ao vivo, criação de enquetes e visualização de resultados.",
       "environment": "dev"
     },
     "project_seven": {
       "title": "Cartão Vet",
-      "description": "Clube de benefícios para pets, proporcionando descontos em consultas veterinárias, exames, vacinas, medicamentos, produtos de pet shop e serviços.",
+      "description": "Clube de benefícios para pets, proporcionando descontos em consultas veterinárias, exames, vacinas, medicamentos, produtos e serviços de pet shop.",
+      "long_description": "Plataforma abrangente de benefícios para pets oferecendo descontos exclusivos em serviços veterinários, medicamentos e produtos para cuidados com animais.",
       "environment": "Produção"
     }
   },
@@ -83,10 +122,10 @@
       "title": "Informações de Contato"
     },
     "send": {
-      "title": "Envie uma Mensagem",
+      "title": "Enviar uma Mensagem",
       "form": {
         "name": "Nome",
-        "email": "Email",
+        "email": "E-mail",
         "message": "Mensagem",
         "button": {
           "to_send": "Enviar Mensagem",
