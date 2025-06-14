@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 
 import { NavBar } from "./navbar";
-import { MobileNav } from "./mobile-nav";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export function Header() {
@@ -31,11 +30,8 @@ export function Header() {
           </div>
         </button>
         
-        {/* Navegação desktop */}
         <NavBar />
-        
-        {/* Navegação mobile */}
-        <MobileNav />
+
       </div>
     </header>
   )
