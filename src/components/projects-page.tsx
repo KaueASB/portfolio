@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router"
 import { ArrowLeft, Filter, Search, Grid, List } from "lucide-react"
@@ -18,6 +18,10 @@ export function ProjectsPage() {
   const [categoryFilter, setCategoryFilter] = useState<FilterType>('all')
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all')
   const [viewMode, setViewMode] = useState<ViewMode>('grid')
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const filteredProjects = projects.filter((project) => {
     const matchesSearch = t(project.title).toLowerCase().includes(searchTerm.toLowerCase()) ||
