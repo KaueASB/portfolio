@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+REFATORACAO_PROJETOS.md
 
 # Editor directories and files
 .vscode/*
