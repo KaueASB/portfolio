@@ -1,63 +1,62 @@
 import { useTranslation } from "react-i18next"
+import { useNavigate } from "react-router"
+import { ArrowRight } from "lucide-react"
 
-import { CardProject } from "./card-project"
+import { ProjectCard } from "./project-card"
+import { projects } from "@/data/projects"
 
 export function Projects() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+  
+  // Mostrar apenas projetos em destaque na home
+  const featuredProjects = projects.filter(project => project.featured).slice(0, 3)
+
+  const handleViewAll = () => {
+    navigate('/projects')
+  }
+
+  const handleProjectClick = () => {
+    navigate('/projects')
+  }
 
   return (
     <section id="projects" className="grid gap-8 scroll-mt-28">
-      <h2 className="text-3xl font-bold">{t('projects.title')}</h2>
-      <div className="grid md:grid-cols-2 gap-8">
-        <CardProject
-          name={t('projects.project_seven.title')}
-          description={t('projects.project_seven.description')}
-          linkGithub=""
-          linkDeploy="https://cartaovet.com.br/"
-          environment={t('projects.project_seven.environment')}
-        />
+      <div className="flex items-center justify-between">
+        <h2 className="text-3xl font-bold">{t('projects.title')}</h2>
+        <button
+          onClick={handleViewAll}
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group"
+        >
+          {t('projects.view_all')}
+          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+        </button>
+      </div>
+      
+      <div className="text-muted-foreground mb-4">
+        <p>{t('projects.featured_description')}</p>
+      </div>
 
-        <CardProject
-          name={t('projects.project_one.title')}
-          description={t('projects.project_one.description')}
-          linkGithub=""
-          linkDeploy="https://pastelaria-maza.vercel.app"
-          environment={t('projects.project_one.environment')}
-        />
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        {featuredProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            variant="featured"
+            onClick={handleProjectClick}
+          />
+        ))}
+      </div>
 
-        <CardProject
-          name={t('projects.project_two.title')}
-          description={t('projects.project_two.description')}
-          linkGithub=""
-          linkDeploy="https://kjrdev.com.br/"
-          environment={t('projects.project_two.environment')}
-        />
-
-        <CardProject
-          name={t('projects.project_three.title')}
-          description={t('projects.project_three.description')}
-          linkGithub="https://github.com/KaueASB/nlw-ai"
-          linkDeploy="https://nlw-ai-seven.vercel.app"
-        />
-
-        <CardProject
-          name={t('projects.project_four.title')}
-          description={t('projects.project_four.description')}
-          linkGithub="https://github.com/KaueASB/api-solid-node-prisma"
-        />
-
-        <CardProject
-          name={t('projects.project_five.title')}
-          description={t('projects.project_five.description')}
-          linkGithub="https://github.com/KaueASB/pizzashop-api"
-          linkDeploy="https://pizzashopp-web.vercel.app"
-        />
-
-        <CardProject
-          name={t('projects.project_six.title')}
-          description={t('projects.project_six.description')}
-          linkGithub="https://github.com/KaueASB/system-real-time-votation"
-        />
+      {/* Call to action para ver todos os projetos */}
+      <div className="text-center pt-8">
+        <button
+          onClick={handleViewAll}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+        >
+          {t('projects.see_all_projects')}
+          <ArrowRight className="h-4 w-4" />
+        </button>
       </div>
     </section>
   )
