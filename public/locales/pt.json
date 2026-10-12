@@ -112,6 +112,16 @@
       "description": "Clube de benefícios para pets, proporcionando descontos em consultas veterinárias, exames, vacinas, medicamentos, produtos e serviços de pet shop.",
       "long_description": "Plataforma abrangente de benefícios para pets oferecendo descontos exclusivos em serviços veterinários, medicamentos e produtos para cuidados com animais.",
       "environment": "Produção"
+    },
+    "archive": {
+      "title": "Todos os projetos",
+      "description": "Arquivo completo do que construí: APIs, aplicações full stack e sites em produção, do mais recente ao mais antigo.",
+      "year": "Ano",
+      "project": "Projeto",
+      "category": "Categoria",
+      "status": "Status",
+      "stack": "Stack",
+      "link": "Link"
     }
   },
   "contact": {

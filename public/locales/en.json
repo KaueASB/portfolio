@@ -112,6 +112,16 @@
       "description": "Pet benefits club, providing discounts on veterinary consultations, exams, vaccinations, medicines, pet shop products and services.",
       "long_description": "Comprehensive pet benefits platform offering exclusive discounts on veterinary services, medications, and pet care products.",
       "environment": "Production"
+    },
+    "archive": {
+      "title": "All projects",
+      "description": "A complete archive of what I have built: APIs, full stack applications and production websites, newest first.",
+      "year": "Year",
+      "project": "Project",
+      "category": "Category",
+      "status": "Status",
+      "stack": "Stack",
+      "link": "Link"
     }
   },
   "contact": {
