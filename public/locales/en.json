@@ -18,15 +18,19 @@
   "common": {
     "back": "Back",
     "theme": "Theme",
-    "language": "Language"
+    "language": "Language",
+    "sections": "Sections"
   },
   "header": {
     "role": "Backend Developer",
     "nav": {
       "about": "About",
       "project": "Projects",
-      "contact": "Contact"
-    }
+      "contact": "Contact",
+      "experience": "Journey",
+      "skills": "Stack"
+    },
+    "tagline": "I build reliable APIs and web systems, with the business sense of someone who spent ten years negotiating contracts."
   },
   "about": {
     "title": "About Me",
@@ -127,10 +131,42 @@
           "sending": "Sending..."
         }
       }
-    }
+    },
+    "description": "Have a role or a project in mind? Send me a message."
   },
   "footer": {
     "rights": "Kaue Alves. All rights reserved.",
-    "top": "Back to top"
+    "top": "Back to top",
+    "credit": "Inspired by the brittanychiang.com layout. Built with React and Tailwind CSS."
+  },
+  "experience": {
+    "title": "Journey",
+    "items": {
+      "current": {
+        "period": "Now",
+        "title": "Backend Developer",
+        "description": "+3 years on web applications focused on backend: APIs, data modeling and deployment."
+      },
+      "trybe": {
+        "period": "2021",
+        "title": "Full Stack Program · Trybe",
+        "description": "Web, back-end, database and testing fundamentals, with team projects and hackathons."
+      },
+      "buyer": {
+        "period": "2011 — 2021",
+        "title": "Buyer",
+        "description": "Negotiation of service contracts, purchasing of supplies and consumables, and contract management."
+      }
+    }
+  },
+  "skills": {
+    "title": "Stack",
+    "groups": {
+      "backend": "Backend",
+      "data": "Data",
+      "testing": "Testing",
+      "frontend": "Frontend",
+      "infra": "Infra"
+    }
   }
 }

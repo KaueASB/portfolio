@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { Mail, Phone, Github, Linkedin, Loader2 } from "lucide-react"
+import { Loader2 } from "lucide-react"
 import { toast } from "sonner"
 
+import { SectionLabel } from "./section-label"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
@@ -16,11 +17,7 @@ interface FieldLabels {
   [key: string]: string
 }
 
-const contactIcons = {
-  email: Mail,
-  github: Github,
-  linkedin: Linkedin,
-}
+const email = socialLinks.find((link) => link.id === "email")!
 
 export function Contact() {
   const { t } = useTranslation()
@@ -87,67 +84,50 @@ export function Contact() {
     }).finally(() => { setIsLoading(false) })
   }
 
-  const contactItems = [
-    { id: 'phone', label: t('contact.info.phone'), display: phone.display, href: phone.href, external: false, Icon: Phone },
-    ...socialLinks.map((link) => ({ ...link, Icon: contactIcons[link.id] })),
-  ]
-
   return (
-    <section id="contact" className="grid gap-8 scroll-mt-24">
-      <h2 className="text-3xl font-bold">{t('contact.title')}</h2>
-      <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-        <div>
-          <h3 className="text-xl font-bold mb-4">{t('contact.info.title')}</h3>
-          <ul className="grid gap-3">
-            {contactItems.map(({ id, label, display, href, external, Icon }) => (
-              <li key={id}>
-                <a
-                  href={href}
-                  target={external ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 rounded-lg border bg-card p-3 hover:bg-accent transition-colors group"
-                >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-muted group-hover:bg-background transition-colors">
-                    <Icon className="size-5" />
-                  </span>
-                  <span className="min-w-0">
-                    <span className="block text-xs text-muted-foreground">{label}</span>
-                    <span className="block truncate text-sm font-medium">{display}</span>
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <section id="contact" aria-label={t('contact.title')} className="scroll-mt-16 lg:scroll-mt-24">
+      <SectionLabel>{t('header.nav.contact')}</SectionLabel>
+      <p className="mb-5 max-w-[50ch] text-muted-foreground">{t('contact.description')}</p>
 
-        <div>
-          <h3 className="text-xl font-bold mb-4">{t('contact.send.title')}</h3>
-          <form onSubmit={handleEmailSubmit} className="grid gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="contact-name">{t('contact.send.form.name')}</Label>
-              <Input id="contact-name" type="text" name="name" autoComplete="name" />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="contact-email">{t('contact.send.form.email')}</Label>
-              <Input id="contact-email" type="email" name="email" autoComplete="email" />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="contact-message">{t('contact.send.form.message')}</Label>
-              <Textarea id="contact-message" name="message" rows={5} />
-            </div>
-            <Button type="submit" disabled={isLoading} className="justify-center">
-              {isLoading ? (
-                <>
-                  <Loader2 className="size-5 animate-spin mr-2" />
-                  {t('contact.send.form.button.sending')}
-                </>
-              ): (
-                t('contact.send.form.button.to_send')
-              )}
-            </Button>
-          </form>
+      <a
+        href={email.href}
+        className="block w-fit font-heading text-xl font-bold text-foreground transition-colors [overflow-wrap:anywhere] hover:text-primary sm:text-3xl"
+      >
+        {email.display}
+      </a>
+      <a href={phone.href} className="mt-2 block w-fit text-muted-foreground transition-colors hover:text-primary">
+        {phone.display}
+      </a>
+
+      <form onSubmit={handleEmailSubmit} className="mt-10 grid max-w-xl gap-4">
+        <h3 className="font-sans text-xs font-semibold uppercase tracking-[0.1em] text-foreground">
+          {t('contact.send.title')}
+        </h3>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-2">
+            <Label htmlFor="contact-name">{t('contact.send.form.name')}</Label>
+            <Input id="contact-name" type="text" name="name" autoComplete="name" />
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="contact-email">{t('contact.send.form.email')}</Label>
+            <Input id="contact-email" type="email" name="email" autoComplete="email" />
+          </div>
         </div>
-      </div>
+        <div className="grid gap-2">
+          <Label htmlFor="contact-message">{t('contact.send.form.message')}</Label>
+          <Textarea id="contact-message" name="message" rows={5} />
+        </div>
+        <Button type="submit" disabled={isLoading} className="justify-self-start">
+          {isLoading ? (
+            <>
+              <Loader2 className="size-5 animate-spin mr-2" />
+              {t('contact.send.form.button.sending')}
+            </>
+          ): (
+            t('contact.send.form.button.to_send')
+          )}
+        </Button>
+      </form>
     </section>
   )
 }

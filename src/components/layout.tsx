@@ -1,14 +1,12 @@
 import { Outlet } from "react-router"
 
-import { Header } from "./header"
-import { Footer } from "./footer"
+import { Spotlight } from "./spotlight"
 
 export function Layout() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-background text-foreground">
-      <Header />
+    <div className="relative flex flex-col min-h-[100dvh] bg-background text-foreground">
+      <Spotlight />
       <Outlet />
-      <Footer />
     </div>
   )
 }

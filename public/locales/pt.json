@@ -18,15 +18,19 @@
   "common": {
     "back": "Voltar",
     "theme": "Tema",
-    "language": "Idioma"
+    "language": "Idioma",
+    "sections": "Seções"
   },
   "header": {
     "role": "Desenvolvedor Backend",
     "nav": {
       "about": "Sobre",
       "project": "Projetos",
-      "contact": "Contato"
-    }
+      "contact": "Contato",
+      "experience": "Trajetória",
+      "skills": "Stack"
+    },
+    "tagline": "Construo APIs e sistemas web confiáveis, com a visão de negócio de quem passou dez anos negociando contratos."
   },
   "about": {
     "title": "Sobre mim",
@@ -127,10 +131,42 @@
           "sending": "Enviando..."
         }
       }
-    }
+    },
+    "description": "Tem uma vaga ou um projeto em mente? Me mande uma mensagem."
   },
   "footer": {
     "rights": "Kaue Alves. Todos os direitos reservados.",
-    "top": "Voltar ao topo"
+    "top": "Voltar ao topo",
+    "credit": "Inspirado no layout de brittanychiang.com. Feito com React e Tailwind CSS."
+  },
+  "experience": {
+    "title": "Trajetória",
+    "items": {
+      "current": {
+        "period": "Hoje",
+        "title": "Desenvolvedor Backend",
+        "description": "+3 anos em aplicações web com foco em backend: APIs, modelagem de dados e deploy."
+      },
+      "trybe": {
+        "period": "2021",
+        "title": "Formação Full Stack · Trybe",
+        "description": "Fundamentos de web, back-end, bancos de dados e testes, com projetos em equipe e hackathons."
+      },
+      "buyer": {
+        "period": "2011 — 2021",
+        "title": "Comprador",
+        "description": "Negociação de contratos de serviços, compras de suprimentos e consumíveis e gestão de contratos."
+      }
+    }
+  },
+  "skills": {
+    "title": "Stack",
+    "groups": {
+      "backend": "Backend",
+      "data": "Dados",
+      "testing": "Testes",
+      "frontend": "Frontend",
+      "infra": "Infra"
+    }
   }
 }

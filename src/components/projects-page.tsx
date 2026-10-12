@@ -77,7 +77,7 @@ export function ProjectsPage() {
   }
 
   return (
-    <main className="flex-1">
+    <main className="relative z-10 flex-1">
       {/* Título e filtros */}
       <div className="border-b bg-muted/30">
         <div className="container py-8 grid gap-6">

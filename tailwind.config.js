@@ -20,8 +20,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        heading: ["Space Grotesk", "Inter", "ui-sans-serif", "sans-serif"],
+        sans: ["Hanken Grotesk", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["Syne", "Trebuchet MS", "sans-serif"],
       },
       colors: {
         html: "#E34F26",

@@ -18,7 +18,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-muted/50 py-6 border-t">
+    <footer className="relative z-10 bg-muted/50 py-6 border-t">
       <div className="container flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
         <p className="text-muted-foreground text-sm">
           &copy; {new Date().getFullYear()} {t('footer.rights')}
