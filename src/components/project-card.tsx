@@ -1,155 +1,170 @@
 import { useTranslation } from "react-i18next"
-import { ExternalLink, GitBranch, Calendar, Tag } from "lucide-react"
+import { ExternalLink, Github, Calendar, Star } from "lucide-react"
 
 import { Badge } from "./ui/badge"
+import { Button } from "./ui/button"
 import { Project } from "@/data/projects"
+import { cn } from "@/lib/utils"
 
 type ProjectCardProps = {
   project: Project
   variant?: 'default' | 'featured' | 'compact'
-  onClick?: () => void
 }
 
-export function ProjectCard({ project, variant = 'default', onClick }: ProjectCardProps) {
+const statusColors = {
+  production: 'green',
+  development: 'outline',
+  archived: 'secondary'
+} as const
+
+const categoryColors = {
+  web: 'default',
+  mobile: 'secondary',
+  api: 'outline',
+  fullstack: 'secondary'
+} as const
+
+function ProjectLinks({ project, size = 'sm' }: { project: Project, size?: 'sm' | 'icon' }) {
   const { t } = useTranslation()
+  const iconOnly = size === 'icon'
 
-  const statusColors = {
-    production: 'green',
-    development: 'outline',
-    archived: 'secondary'
-  } as const
+  const links = [
+    { href: project.links.deploy, label: t('projects.see_project'), Icon: ExternalLink, primary: true },
+    { href: project.links.github, label: 'GitHub', Icon: Github, primary: false },
+    { href: project.links.demo, label: 'Demo', Icon: ExternalLink, primary: false },
+  ].filter((link) => link.href)
 
-  const categoryColors = {
-    web: 'default',
-    mobile: 'secondary',
-    api: 'outline',
-    fullstack: 'green'
-  } as const
+  return (
+    <div className="flex flex-wrap gap-2">
+      {links.map(({ href, label, Icon, primary }) => (
+        <Button
+          key={label}
+          asChild
+          size={iconOnly ? 'icon' : 'sm'}
+          variant={iconOnly ? 'ghost' : primary ? 'default' : 'outline'}
+          className={cn(iconOnly && 'size-8')}
+        >
+          <a href={href} target="_blank" rel="noopener noreferrer" aria-label={iconOnly ? label : undefined}>
+            <Icon className={cn('size-4', !iconOnly && 'mr-2')} />
+            {!iconOnly && label}
+          </a>
+        </Button>
+      ))}
+    </div>
+  )
+}
+
+function ProjectMedia({ project }: { project: Project }) {
+  const { t } = useTranslation()
+  const title = t(project.title)
+  const image = project.images?.[0]
+
+  if (image) {
+    return (
+      <img
+        src={image}
+        alt={title}
+        loading="lazy"
+        className="aspect-video w-full object-cover border-b"
+      />
+    )
+  }
+
+  const initials = title
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join('')
+    .toUpperCase()
+
+  return (
+    <div
+      aria-hidden
+      className="aspect-video w-full border-b bg-gradient-to-br from-muted via-muted/60 to-background flex items-center justify-center"
+    >
+      <span className="font-heading text-5xl font-bold text-muted-foreground/40 group-hover:text-muted-foreground/60 transition-colors">
+        {initials}
+      </span>
+    </div>
+  )
+}
+
+export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) {
+  const { t, i18n } = useTranslation()
 
   if (variant === 'compact') {
     return (
-      <div 
-        className="bg-card border rounded-lg p-4 hover:shadow-md transition-all duration-200 cursor-pointer group"
-        onClick={onClick}
-      >
-        <div className="flex items-start justify-between mb-2">
-          <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
+      <div className="bg-card border rounded-lg p-4 hover:shadow-md transition-shadow">
+        <div className="flex items-start justify-between gap-4 mb-2">
+          <h3 className="font-semibold text-lg">
             {t(project.title)}
           </h3>
-          <Badge variant={statusColors[project.status]} className="text-xs">
+          <Badge variant={statusColors[project.status]} className="text-xs shrink-0">
             {t(`projects.status.${project.status}`)}
           </Badge>
         </div>
         <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
           {t(project.description)}
         </p>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           <Badge variant={categoryColors[project.category]} className="text-xs">
             {t(`projects.category.${project.category}`)}
           </Badge>
-          <div className="flex gap-2">
-            {project.links.deploy && (
-              <ExternalLink className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
-            )}
-            {project.links.github && (
-              <GitBranch className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
-            )}
-          </div>
+          <ProjectLinks project={project} size="icon" />
         </div>
       </div>
     )
   }
 
   return (
-    <div 
-      className={`bg-card border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group ${
-        onClick ? 'cursor-pointer' : ''
-      } ${variant === 'featured' ? 'ring-2 ring-primary/20' : ''}`}
-      onClick={onClick}
-    >
-      {/* Header com status e categoria */}
-      <div className="p-6 pb-4">
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex items-center gap-2">
+    <div className="bg-card border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col h-full">
+      <ProjectMedia project={project} />
+
+      <div className="p-6 flex flex-col flex-1">
+        <div className="flex items-start justify-between gap-2 mb-3">
+          <div className="flex flex-wrap items-center gap-2">
             <Badge variant={categoryColors[project.category]}>
               {t(`projects.category.${project.category}`)}
             </Badge>
-            {project.featured && (
-              <Badge variant="default" className="bg-gradient-to-r from-purple-500 to-pink-500">
-                ⭐ {t('projects.featured')}
+            {variant === 'default' && project.featured && (
+              <Badge variant="secondary" className="gap-1">
+                <Star className="size-3 fill-current" />
+                {t('projects.featured')}
               </Badge>
             )}
           </div>
-          <Badge variant={statusColors[project.status]}>
+          <Badge variant={statusColors[project.status]} className="shrink-0">
             {t(`projects.status.${project.status}`)}
           </Badge>
         </div>
 
-        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+        <h3 className="text-xl font-bold mb-2">
           {t(project.title)}
         </h3>
-        
+
         <p className="text-muted-foreground mb-4 leading-relaxed">
           {t(project.description)}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-1.5 mb-4">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="inline-flex items-center gap-1 px-2 py-1 bg-muted rounded-md text-xs font-medium"
+              className="px-2 py-0.5 bg-muted rounded-md text-xs font-medium"
             >
-              <Tag className="h-3 w-3" />
               {tech}
             </span>
           ))}
         </div>
 
-        {/* Data de criação */}
-        <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
-          <Calendar className="h-3 w-3" />
-          {new Date(project.createdAt).toLocaleDateString('pt-BR')}
-        </div>
+        <div className="mt-auto grid gap-4">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Calendar className="h-3 w-3" />
+            {new Date(project.createdAt).toLocaleDateString(i18n.language === 'pt' ? 'pt-BR' : 'en-US', { month: 'long', year: 'numeric' })}
+          </div>
 
-        <div className="flex gap-3">
-          {project.links.deploy && (
-            <a
-              href={project.links.deploy}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <ExternalLink className="h-4 w-4" />
-              {t('projects.see_project')}
-            </a>
-          )}
-          
-          {project.links.github && (
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 border border-input bg-background rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <GitBranch className="h-4 w-4" />
-              GitHub
-            </a>
-          )}
-          
-          {project.links.demo && (
-            <a
-              href={project.links.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 border border-input bg-background rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <ExternalLink className="h-4 w-4" />
-              Demo
-            </a>
-          )}
+          <ProjectLinks project={project} />
         </div>
       </div>
     </div>

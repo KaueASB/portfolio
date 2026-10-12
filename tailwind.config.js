@@ -19,6 +19,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["Space Grotesk", "Inter", "ui-sans-serif", "sans-serif"],
+      },
       colors: {
         html: "#E34F26",
         js: "#F7DF1E",

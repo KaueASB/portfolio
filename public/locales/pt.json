@@ -67,12 +67,6 @@
       "development": "Desenvolvimento",
       "archived": "Arquivado"
     },
-    "stats": {
-      "total": "Total de Projetos",
-      "production": "Em Produção",
-      "development": "Em Desenvolvimento",
-      "featured": "Em Destaque"
-    },
     "project_one": {
       "title": "I Love Pastel",
       "description": "Aplicação web para gerenciamento de pedidos e controle de estoque.",
@@ -119,7 +113,8 @@
   "contact": {
     "title": "Entre em Contato",
     "info": {
-      "title": "Informações de Contato"
+      "title": "Informações de Contato",
+      "phone": "Telefone"
     },
     "send": {
       "title": "Enviar uma Mensagem",
@@ -135,7 +130,7 @@
     }
   },
   "footer": {
-    "rights": "2024 Kaue Alves. Todos os direitos reservados.",
+    "rights": "Kaue Alves. Todos os direitos reservados.",
     "top": "Voltar ao topo"
   }
 }
