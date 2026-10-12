@@ -24,3 +24,6 @@ REFATORACAO_PROJETOS.md
 *.sln
 *.sw?
 .env
+
+# Protótipos locais de design
+docs/
