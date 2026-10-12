@@ -67,12 +67,6 @@
       "development": "Development",
       "archived": "Archived"
     },
-    "stats": {
-      "total": "Total Projects",
-      "production": "In Production",
-      "development": "In Development",
-      "featured": "Featured"
-    },
     "project_one": {
       "title": "I Love Pastel",
       "description": "Web application for order management and inventory management.",
@@ -119,7 +113,8 @@
   "contact": {
     "title": "Get in Touch",
     "info": {
-      "title": "Contact Information"
+      "title": "Contact Information",
+      "phone": "Phone"
     },
     "send": {
       "title": "Send a Message",
@@ -135,7 +130,7 @@
     }
   },
   "footer": {
-    "rights": "2024 Kaue Alves. All rights reserved.",
+    "rights": "Kaue Alves. All rights reserved.",
     "top": "Back to top"
   }
 }
