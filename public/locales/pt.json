@@ -178,5 +178,10 @@
       "frontend": "Frontend",
       "infra": "Infra"
     }
+  },
+  "not_found": {
+    "title": "Página não encontrada",
+    "description": "O endereço que você acessou não existe ou foi movido.",
+    "home": "Voltar ao início"
   }
 }
