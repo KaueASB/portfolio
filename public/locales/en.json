@@ -78,7 +78,7 @@
       "environment": "Production"
     },
     "project_two": {
-      "title": "KJR Development",
+      "title": "KJR Desenvolvimento",
       "description": "Landing page of a software house.",
       "long_description": "Modern and responsive landing page for a software development company, showcasing services and portfolio.",
       "environment": "Production"
