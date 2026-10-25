@@ -182,7 +182,15 @@ export function ProjectsPage() {
                     {project.createdAt.slice(0, 4)}
                   </td>
                   <td className="py-4 pr-6">
-                    {mainLink ? (
+                    {project.caseSlug ? (
+                      <Link
+                        to={`/cases/${project.caseSlug}`}
+                        className="font-semibold text-foreground transition-colors hover:text-primary"
+                      >
+                        {t(project.title)}
+                        <span className="ml-1 inline-block text-primary">→</span>
+                      </Link>
+                    ) : mainLink ? (
                       <a
                         href={mainLink.href}
                         target="_blank"
@@ -220,6 +228,16 @@ export function ProjectsPage() {
                   </td>
                   <td className="hidden py-4 pt-[1.15rem] sm:table-cell">
                     <ul className="grid gap-1">
+                      {project.caseSlug && (
+                        <li>
+                          <Link
+                            to={`/cases/${project.caseSlug}`}
+                            className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+                          >
+                            {t('projects.archive.case')} →
+                          </Link>
+                        </li>
+                      )}
                       {links.map((link) => (
                         <li key={link.href}>
                           <a

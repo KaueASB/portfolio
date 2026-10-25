@@ -2,119 +2,161 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  longDescription?: string;
   technologies: string[];
   category: "web" | "mobile" | "api" | "fullstack";
   status: "production" | "development" | "archived";
+  type: "work" | "study";
+  caseSlug?: string;
   links: {
     github?: string;
     deploy?: string;
     demo?: string;
   };
-  images?: string[];
-  featured: boolean;
   createdAt: string;
 }
 
+// Textos em public/locales: projects.items.<id>.{title,description}
 export const projects: Project[] = [
   {
-    id: "cartao-vet",
-    title: "projects.project_seven.title",
-    description: "projects.project_seven.description",
-    longDescription: "projects.project_seven.long_description",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    id: "zeca",
+    title: "projects.items.zeca.title",
+    description: "projects.items.zeca.description",
+    technologies: ["React", "TypeScript", "Fastify", "MySQL"],
     category: "fullstack",
     status: "production",
-    links: {
-      deploy: "https://cartaovet.com.br/",
-    },
-    featured: true,
-    createdAt: "2024-01-15",
+    type: "work",
+    caseSlug: "zeca",
+    links: {},
+    createdAt: "2024-12-01",
   },
   {
-    id: "pastelaria-maza",
-    title: "projects.project_one.title",
-    description: "projects.project_one.description",
-    longDescription: "projects.project_one.long_description",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
-    category: "web",
+    id: "voltlab",
+    title: "projects.items.voltlab.title",
+    description: "projects.items.voltlab.description",
+    technologies: ["TanStack Start", "React Flow", "PostgreSQL"],
+    category: "fullstack",
+    status: "development",
+    type: "work",
+    caseSlug: "voltlab",
+    links: {
+      deploy: "https://voltlab-seven.vercel.app",
+    },
+    createdAt: "2026-10-09",
+  },
+  {
+    id: "conserte-car",
+    title: "projects.items.conserte_car.title",
+    description: "projects.items.conserte_car.description",
+    technologies: ["Fastify", "Drizzle ORM", "PostgreSQL", "React"],
+    category: "fullstack",
     status: "production",
-    links: {
-      deploy: "https://pastelaria-maza.vercel.app",
-    },
-    featured: true,
-    createdAt: "2023-12-10",
+    type: "work",
+    caseSlug: "conserte-car",
+    links: {},
+    createdAt: "2025-12-16",
   },
   {
-    id: "kjrdev-portfolio",
-    title: "projects.project_two.title",
-    description: "projects.project_two.description",
-    longDescription: "projects.project_two.long_description",
+    id: "wg-estacionamento",
+    title: "projects.items.wg.title",
+    description: "projects.items.wg.description",
+    technologies: ["Fastify", "Drizzle ORM", "PostgreSQL"],
+    category: "api",
+    status: "production",
+    type: "work",
+    caseSlug: "wg-estacionamento",
+    links: {},
+    createdAt: "2025-07-04",
+  },
+  {
+    id: "i-love-pastel",
+    title: "projects.items.pastel.title",
+    description: "projects.items.pastel.description",
+    technologies: ["Fastify", "Prisma", "PostgreSQL", "React"],
+    category: "fullstack",
+    status: "archived",
+    type: "work",
+    caseSlug: "i-love-pastel",
+    links: {},
+    createdAt: "2024-06-10",
+  },
+  {
+    id: "kjr-desenvolvimento",
+    title: "projects.items.kjr.title",
+    description: "projects.items.kjr.description",
     technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     category: "web",
     status: "production",
+    type: "work",
     links: {
       deploy: "https://kjrdev.com.br/",
     },
-    featured: true,
     createdAt: "2023-11-20",
   },
   {
-    id: "nlw-ai",
-    title: "projects.project_three.title",
-    description: "projects.project_three.description",
-    longDescription: "projects.project_three.long_description",
+    id: "cartao-vet",
+    title: "projects.items.cartao_vet.title",
+    description: "projects.items.cartao_vet.description",
+    technologies: ["Node.js", "AWS Lambda", "MySQL", "Stripe"],
+    category: "api",
+    status: "production",
+    type: "work",
+    caseSlug: "cartao-vet",
+    links: {
+      deploy: "https://cartaovet.com.br/",
+    },
+    createdAt: "2023-05-01",
+  },
+  {
+    id: "upload-ai",
+    title: "projects.items.upload_ai.title",
+    description: "projects.items.upload_ai.description",
     technologies: ["React", "Node.js", "OpenAI API", "Prisma"],
     category: "fullstack",
-    status: "development",
+    status: "archived",
+    type: "study",
     links: {
       github: "https://github.com/KaueASB/nlw-ai",
       deploy: "https://nlw-ai-seven.vercel.app",
     },
-    featured: false,
     createdAt: "2023-10-15",
   },
   {
-    id: "api-solid-node",
-    title: "projects.project_four.title",
-    description: "projects.project_four.description",
-    longDescription: "projects.project_four.long_description",
+    id: "gym-api",
+    title: "projects.items.gym_api.title",
+    description: "projects.items.gym_api.description",
     technologies: ["Node.js", "TypeScript", "Prisma", "Fastify"],
     category: "api",
-    status: "development",
+    status: "archived",
+    type: "study",
     links: {
       github: "https://github.com/KaueASB/api-solid-node-prisma",
     },
-    featured: false,
     createdAt: "2023-09-20",
   },
   {
-    id: "pizzashop",
-    title: "projects.project_five.title",
-    description: "projects.project_five.description",
-    longDescription: "projects.project_five.long_description",
-    technologies: ["React", "Node.js", "PostgreSQL", "Docker"],
-    category: "fullstack",
-    status: "production",
+    id: "pizza-shop-api",
+    title: "projects.items.pizza_shop.title",
+    description: "projects.items.pizza_shop.description",
+    technologies: ["Node.js", "PostgreSQL", "Docker"],
+    category: "api",
+    status: "archived",
+    type: "study",
     links: {
       github: "https://github.com/KaueASB/pizzashop-api",
-      deploy: "https://pizzashopp-web.vercel.app",
     },
-    featured: false,
     createdAt: "2023-08-10",
   },
   {
     id: "realtime-voting",
-    title: "projects.project_six.title",
-    description: "projects.project_six.description",
-    longDescription: "projects.project_six.long_description",
+    title: "projects.items.voting.title",
+    description: "projects.items.voting.description",
     technologies: ["Node.js", "WebSocket", "Redis", "PostgreSQL"],
     category: "api",
-    status: "development",
+    status: "archived",
+    type: "study",
     links: {
       github: "https://github.com/KaueASB/system-real-time-votation",
     },
-    featured: false,
     createdAt: "2023-07-25",
   },
 ];

@@ -6,12 +6,14 @@ import { useActiveSection } from "@/hooks/use-active-section"
 import { socialLinks } from "@/data/contact"
 import { cn } from "@/lib/utils"
 
-const sections = ["about", "experience", "projects", "skills", "contact"]
+const sections = ["about", "cases", "products", "services", "experience", "skills", "contact"]
 
 const navKeys: Record<string, string> = {
   about: "header.nav.about",
+  cases: "header.nav.cases",
+  products: "header.nav.products",
+  services: "header.nav.services",
   experience: "header.nav.experience",
-  projects: "header.nav.project",
   skills: "header.nav.skills",
   contact: "header.nav.contact",
 }

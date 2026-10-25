@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next"
+import { Link } from "react-router"
 
 import { SectionLabel } from "./section-label"
 import { experience } from "@/data/experience"
@@ -33,6 +34,14 @@ export function Experience() {
                     </li>
                   ))}
                 </ul>
+              )}
+              {item.caseSlug && (
+                <Link
+                  to={`/cases/${item.caseSlug}`}
+                  className="mt-3 inline-block text-sm font-semibold text-primary underline-offset-4 hover:underline"
+                >
+                  {t('experience.see_case')} →
+                </Link>
               )}
             </div>
           </li>

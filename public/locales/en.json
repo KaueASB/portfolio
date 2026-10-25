@@ -28,7 +28,10 @@
       "project": "Projects",
       "contact": "Contact",
       "experience": "Journey",
-      "skills": "Stack"
+      "skills": "Stack",
+      "cases": "Case studies",
+      "products": "Products",
+      "services": "Services"
     },
     "tagline": "I build reliable APIs and web systems, with the business sense of someone who spent ten years negotiating contracts."
   },
@@ -49,11 +52,7 @@
   },
   "projects": {
     "title": "My Projects",
-    "see_project": "See Project",
-    "view_all": "View All",
     "see_all_projects": "See All Projects",
-    "featured": "Featured",
-    "featured_description": "Here are some of my featured projects that showcase my skills and experience.",
     "search_placeholder": "Search projects...",
     "showing_results": "Showing {{count}} of {{total}} projects",
     "no_results": "No projects found with the current filters.",
@@ -71,48 +70,6 @@
       "development": "Development",
       "archived": "Archived"
     },
-    "project_one": {
-      "title": "I Love Pastel",
-      "description": "Web application for order management and inventory management.",
-      "long_description": "Complete web application for managing orders and inventory in a pastel shop, featuring real-time updates and intuitive interface.",
-      "environment": "Production"
-    },
-    "project_two": {
-      "title": "KJR Desenvolvimento",
-      "description": "Landing page of a software house.",
-      "long_description": "Modern and responsive landing page for a software development company, showcasing services and portfolio.",
-      "environment": "Production"
-    },
-    "project_three": {
-      "title": "Upload AI",
-      "description": "Project for video-to-audio conversion and text transcription with OpenAI API for title and description suggestions.",
-      "long_description": "Innovative application that converts videos to audio, transcribes content, and uses AI to generate optimized titles and descriptions.",
-      "environment": "dev"
-    },
-    "project_four": {
-      "title": "Gym API",
-      "description": "API for gym management in the Gympass style. Applying S.O.L.I.D. principles.",
-      "long_description": "Robust API for gym management following SOLID principles, featuring user authentication, check-ins, and gym search functionality.",
-      "environment": "dev"
-    },
-    "project_five": {
-      "title": "Pizza Shop API",
-      "description": "API for pizzeria management in the IFood style. Allows tracking orders, changing status, canceling, and generating a dashboard.",
-      "long_description": "Complete API for pizzeria management with order tracking, status management, cancellation features, and comprehensive dashboard.",
-      "environment": "dev"
-    },
-    "project_six": {
-      "title": "Real-Time Voting System",
-      "description": "API for real-time voting application. Creating polls, voting, and tracking votes.",
-      "long_description": "Real-time voting system API with WebSocket support for live vote tracking, poll creation, and result visualization.",
-      "environment": "dev"
-    },
-    "project_seven": {
-      "title": "Cartão Vet",
-      "description": "Pet benefits club, providing discounts on veterinary consultations, exams, vaccinations, medicines, pet shop products and services.",
-      "long_description": "Comprehensive pet benefits platform offering exclusive discounts on veterinary services, medications, and pet care products.",
-      "environment": "Production"
-    },
     "archive": {
       "title": "All projects",
       "description": "A complete archive of what I have built: APIs, full stack applications and production websites, newest first.",
@@ -121,7 +78,54 @@
       "category": "Category",
       "status": "Status",
       "stack": "Stack",
-      "link": "Link"
+      "link": "Link",
+      "case": "Case study"
+    },
+    "items": {
+      "zeca": {
+        "title": "Zeca · Innoa Seguros",
+        "description": "Benefits management platform for brokers and the HR teams of client companies."
+      },
+      "voltlab": {
+        "title": "VoltLab",
+        "description": "Visual editor for electrical installations that checks the design against NBR 5410."
+      },
+      "conserte_car": {
+        "title": "Conserte Car",
+        "description": "Management SaaS for car repair shops, with work orders, inventory and recurring billing."
+      },
+      "wg": {
+        "title": "WG Estacionamento",
+        "description": "Parking lot management: lot control, hourly billing, memberships, till and reports."
+      },
+      "pastel": {
+        "title": "I Love Pastel",
+        "description": "Order ticket system for a pastry shop, used for about a year."
+      },
+      "kjr": {
+        "title": "KJR Desenvolvimento",
+        "description": "Website of my software development company."
+      },
+      "cartao_vet": {
+        "title": "Cartão Vet",
+        "description": "Backend and payment gateway switch for a pet benefits club."
+      },
+      "upload_ai": {
+        "title": "Upload AI",
+        "description": "Converts video to audio, transcribes it and suggests a title and description with the OpenAI API."
+      },
+      "gym_api": {
+        "title": "Gym API",
+        "description": "Gympass-style gym API applying SOLID principles."
+      },
+      "pizza_shop": {
+        "title": "Pizza Shop API",
+        "description": "Pizza shop API with orders, status, cancellation and a dashboard."
+      },
+      "voting": {
+        "title": "Real-Time Voting",
+        "description": "Polls with live votes over WebSocket."
+      }
     }
   },
   "contact": {
@@ -151,11 +155,22 @@
   },
   "experience": {
     "title": "Journey",
+    "see_case": "Read the case study",
     "items": {
-      "current": {
-        "period": "Now",
-        "title": "Backend Developer",
-        "description": "+3 years on web applications focused on backend: APIs, data modeling and deployment."
+      "innoa": {
+        "period": "Dec 2024 — now",
+        "title": "Lead developer · Innoa Seguros",
+        "description": "Responsible for the technical decisions and architecture of Zeca, the broker's benefits management platform. I maintain v1 in production and lead the build of v2."
+      },
+      "kjr": {
+        "period": "Alongside",
+        "title": "Founder · KJR Desenvolvimento",
+        "description": "My company. I build custom systems and my own products for small and mid-sized businesses, such as WG Estacionamento and Conserte Car."
+      },
+      "wefirst": {
+        "period": "May — Jul 2023",
+        "title": "Backend developer · Wefirst",
+        "description": "Payment integration for Cartão Vet and development of Rulli, a visitor management system for building reception desks that started as a trial project and became the client's system."
       },
       "trybe": {
         "period": "2021",
@@ -183,5 +198,268 @@
     "title": "Page not found",
     "description": "The address you visited does not exist or has been moved.",
     "home": "Back to home"
+  },
+  "cases_section": {
+    "title": "Case studies",
+    "intro": "Systems I built for clients and companies, with the context, decisions and outcome of each one.",
+    "read": "Read the case study"
+  },
+  "products": {
+    "title": "Products",
+    "intro": "My own products, built to serve many customers with the same system.",
+    "read": "Learn about the product"
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Through KJR Desenvolvimento, my company, I build custom systems for small and mid-sized businesses. Ten years in purchasing taught me to understand the business process before writing any code.",
+    "offerings": [
+      {
+        "title": "Custom management systems",
+        "description": "Operations, cash flow, customers and reports, built around how your business works."
+      },
+      {
+        "title": "SaaS from scratch",
+        "description": "Many companies on one system, plans, recurring billing and a customer area."
+      },
+      {
+        "title": "Payments and integrations",
+        "description": "PIX, cards and subscriptions with gateways such as Stripe and AbacatePay, plus APIs that connect systems."
+      },
+      {
+        "title": "Websites and landing pages",
+        "description": "A fast, responsive online presence that is easy to maintain."
+      }
+    ],
+    "process_title": "How it works",
+    "process": [
+      {
+        "title": "Conversation",
+        "description": "I learn about the problem and how the process works today."
+      },
+      {
+        "title": "Proposal",
+        "description": "You get scope, timeline and price in writing."
+      },
+      {
+        "title": "Development",
+        "description": "Delivered in stages, with the system running early so you can validate it."
+      },
+      {
+        "title": "Follow-up",
+        "description": "I stay with the system in production and adjust what is needed."
+      }
+    ],
+    "cta": "Request a quote"
+  },
+  "lab": {
+    "title": "Lab",
+    "intro": "Study projects where I try new tools and patterns.",
+    "archive": "See all projects"
+  },
+  "cases": {
+    "back": "Kaue Alves",
+    "period": "Period",
+    "role": "Role",
+    "stack": "Stack",
+    "links_title": "Links",
+    "next": "Next case study",
+    "links": {
+      "website": "Product website",
+      "open_product": "Open VoltLab"
+    },
+    "wg-estacionamento": {
+      "title": "WG Estacionamento",
+      "label": "Custom system · in production",
+      "pitch": "A management system for a parking lot that opened from scratch and has run on it since day one.",
+      "period": "2025 — now",
+      "role": "API and business rules, in partnership",
+      "highlights": [
+        {
+          "value": "8,858",
+          "label": "vehicle entries recorded"
+        },
+        {
+          "value": "620",
+          "label": "vehicles per month on average"
+        },
+        {
+          "value": "1,600+",
+          "label": "registered customers"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Context",
+          "body": "The client was opening a new parking lot with no system at all. They needed to track the lot, charge hourly and monthly customers and close the till from opening day."
+        },
+        {
+          "heading": "What I built",
+          "items": [
+            "Vehicle check-in and check-out by licence plate, with the customer linked by their tax ID.",
+            "Hourly charging with a grace period, paid by PIX, card or cash.",
+            "Monthly and overnight plans with a fixed due date, pro-rated sign-up and time-limited discounts.",
+            "Daily till and a monthly report by payment method.",
+            "Admin and operator roles, recording who received each payment.",
+            "Manual entries with a past date, to fix forgotten check-ins."
+          ]
+        },
+        {
+          "heading": "My role",
+          "body": "Built in partnership with my business partner. I built the API: billing rules, memberships, till, reports and authentication. He built the frontend."
+        },
+        {
+          "heading": "Technical decisions",
+          "body": "Amounts are always stored in cents and payments run inside database transactions. The API is organised by domain, with Zod validation and Swagger docs. The database evolved through 41 migrations as the client's real needs came up. The system was built ready for more than one location, so the client can open new sites without rework."
+        },
+        {
+          "heading": "Outcome",
+          "body": "In daily use since opening day in August 2025. By October 2026 it had recorded 8,858 vehicle entries, about 620 a month, and more than 1,600 registered customers across monthly and overnight plans."
+        }
+      ],
+      "images": {
+        "dashboard": "WG Estacionamento home screen with the system's eight modules",
+        "entry": "Vehicle check-in form",
+        "exit": "Vehicle check-out screen with licence plate search"
+      }
+    },
+    "zeca": {
+      "title": "Zeca · Innoa Seguros",
+      "label": "Current job · lead developer",
+      "pitch": "Innoa's health and life benefits management platform, used by the broker's own team and by the HR departments of client companies.",
+      "period": "Dec 2024 — now",
+      "role": "Lead developer",
+      "highlights": [
+        {
+          "value": "40+",
+          "label": "client companies"
+        },
+        {
+          "value": "5,500+",
+          "label": "beneficiaries"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "My role",
+          "body": "I am Innoa's lead developer. Technical decisions, architecture, new ideas and complex problems go through me. I maintain and evolve v1, which is still in production, and lead the build of v2 of the broker area, with a new frontend and API."
+        },
+        {
+          "heading": "What v2 covers",
+          "body": "Contracts and policyholders, beneficiaries and enrolment changes, support tickets and a deals board to follow each opportunity."
+        },
+        {
+          "heading": "Technical decisions",
+          "body": "Code organised by context, keeping the broker area and the HR area apart. Two layers of tests: unit and component tests, plus end-to-end tests against a mocked API, so screens can be tested without the backend. CI runs lint, type checks and tests, and commits follow a convention. The v2 backend and frontend move together, one complete feature at a time."
+        }
+      ]
+    },
+    "cartao-vet": {
+      "title": "Cartão Vet",
+      "label": "Contractor · backend and payments",
+      "pitch": "Switching a pet benefits club's payment gateway from PagSeguro to Stripe.",
+      "period": "May — Jul 2023",
+      "role": "Backend and payments",
+      "sections": [
+        {
+          "heading": "Context",
+          "body": "Cartão Vet is a discount club for pet owners, with monthly and yearly plans that renew automatically. Billing ran on PagSeguro, which no longer served the project well, and support did not respond."
+        },
+        {
+          "heading": "What I did",
+          "body": "I was hired for the backend, mainly the payments. I compared both gateways' fees, showed that Stripe would cut the cost per transaction considerably and built the Stripe integration."
+        },
+        {
+          "heading": "Outcome",
+          "body": "Billing moved to a gateway with responsive support and lower fees."
+        }
+      ]
+    },
+    "i-love-pastel": {
+      "title": "I Love Pastel",
+      "label": "Client · 2024",
+      "pitch": "An order ticket system for a pastry shop.",
+      "period": "2024",
+      "role": "Backend",
+      "sections": [
+        {
+          "heading": "What I built",
+          "body": "Create, edit, print and reprint order tickets, see the day's orders and browse the menu with photos, with staff login."
+        },
+        {
+          "heading": "My role",
+          "body": "The whole backend: API, database modelling and deployment. The frontend was built as a pair."
+        },
+        {
+          "heading": "Outcome",
+          "body": "Used in the shop every day for about a year, until the shop closed."
+        }
+      ]
+    },
+    "conserte-car": {
+      "title": "Conserte Car",
+      "label": "SaaS product",
+      "pitch": "A management SaaS for car repair shops, born from one client's request and designed from the start to serve many shops.",
+      "period": "2025 — now",
+      "role": "Product, API and frontend",
+      "sections": [
+        {
+          "heading": "Context",
+          "body": "The shop worked with paper, spreadsheets and scattered information, and paid a lot for a system that did not fit its routine."
+        },
+        {
+          "heading": "What I built",
+          "items": [
+            "Work orders with status, priority, the shop's own numbering and a printout with logo and warranty terms.",
+            "Customers and vehicles, where a vehicle can have more than one owner.",
+            "Parts inventory with minimum and maximum levels, cost and sale price, and movement history linked to work orders.",
+            "Service catalogue, mechanics and a dashboard with indicators and low-stock alerts.",
+            "Team invitations by email and role-based permissions."
+          ]
+        },
+        {
+          "heading": "SaaS model",
+          "body": "Each shop's data is isolated. Sign-up starts a free trial, the subscription renews by PIX with limits per plan, and an expired account becomes read-only instead of losing its data."
+        },
+        {
+          "heading": "Technical decisions",
+          "body": "Unit and end-to-end tests against a real PostgreSQL. Deployment only happens after lint, type checks and tests pass, with migrations applied first. On the frontend, every API response is validated with Zod."
+        },
+        {
+          "heading": "Validation",
+          "body": "The first customer used the system and paid the subscription for three months, which validated the whole recurring billing flow."
+        }
+      ]
+    },
+    "voltlab": {
+      "title": "VoltLab",
+      "label": "Own product · MVP",
+      "pitch": "A visual editor for home electrical installations that checks the design against the Brazilian NBR 5410 standard.",
+      "period": "2026",
+      "role": "Whole product",
+      "sections": [
+        {
+          "heading": "Who it is for",
+          "body": "Home owners with everyday doubts, such as the shower that trips the breaker or the cable that gets hot, and electricians who want to see the calculations."
+        },
+        {
+          "heading": "What it does today",
+          "items": [
+            "Draw the installation on a canvas: service entrance, panel, breakers, RCDs, loads and cables.",
+            "Check current, cable ampacity, voltage drop, cable and breaker coordination, RCD use and dedicated circuits in real time.",
+            "Cite the clause of the standard for each finding and show the calculation.",
+            "Mark a result as inconclusive when data is missing, instead of guessing a value.",
+            "Save projects with version history."
+          ]
+        },
+        {
+          "heading": "Technical decisions",
+          "body": "The calculation engine is plain TypeScript, separate from the interface and covered by tests. It runs in the browser and on the server and follows a technical specification written before the code."
+        },
+        {
+          "heading": "Current stage",
+          "body": "MVP is live. Results are shown as a preview and do not replace a design by a licensed professional."
+        }
+      ]
+    }
   }
 }
